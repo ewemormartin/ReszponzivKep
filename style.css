@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(214, 212, 212);
+}
+header,main,nav, section,.kiskep.nagykep{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h3{
+    text-align: center;
+}
+main{
+    width: 60%;
+    margin: auto;
+}
+.kiskep{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    
+}
+.kiskep .kep img{
+    width: 100%;
+    border: 1px solid black;
+    padding: 1px;
+}
+.nagykep img{
+    width: 100%;
+}
+nav{
+    background-color: gray;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+    padding-left: 0;
+    margin: 0;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+footer{
+    grid-area: f;
+}
+article{
+    grid-area: a;
+}
+nav{
+    grid-area: n;
+}
+header{
+    grid-area: h;
+}
+.menupiros{
+    background-color: red;
+}
+nav ul li:hover {
+    background-color: aqua;
+    
+}
+@media screen and (max-width: 450px) {
+    body {
+      width: 100%;
+      font-size: 5vw;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "a"
+                             "f";
+    }
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+  }
